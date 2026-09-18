@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スタッフ登録・変更</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#000;color:#fff;font-family:system-ui,sans-serif;padding:40px 5%}
+main{max-width:760px;margin:auto}h1{font-size:28px;margin-bottom:10px}p{color:#bbb}.card{background:#181818;border:1px solid #444;padding:24px;margin:24px 0;border-radius:8px}
+.staff{border-bottom:1px solid #444;padding:18px 0}.staff:last-child{border-bottom:0}
+.row{display:grid;grid-template-columns:1fr 150px 160px;gap:10px;margin:10px 0}
+input,select,button{font:inherit;padding:11px;border-radius:4px;border:1px solid #555;background:#000;color:#fff}
+button{background:#2ecc71;border-color:#2ecc71;color:#fff;cursor:pointer;margin-top:15px}
+.delete{background:#e74c3c;border-color:#e74c3c}.back{display:inline-block;margin-top:15px;color:#fff}
+.note{font-size:13px;color:#aaa;line-height:1.7}
+@media(max-width:650px){.row{grid-template-columns:1fr}.card{padding:16px}}
+</style>
+</head>
+<body>
+<main>
+<h1>スタッフ登録・変更</h1>
+<p>無料版は最大3名まで登録できます。</p>
+<div class="card">
+  <div id="staffList"></div>
+  <button id="saveBtn">保存する</button>
+  <a class="back" href="../index.html">← 会議金額メーターへ戻る</a>
+</div>
+<p class="note">
+月給の場合は「月給 ÷ 160時間」で時給換算します。<br>
+登録内容はこのブラウザのlocalStorageに保存されます。サーバーへの送信はありません。
+</p>
+</main>
+<script src="../hide/js/staff.js"></script>
+</body>
+</html>
